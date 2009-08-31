@@ -58,12 +58,12 @@ namespace MorfeuszNet
         /// <summary>
         /// Dokonuje analizy tekstu i zwraca tablicę struktur
         /// </summary>
-        /// <param name="tekst"></param>
-        /// <returns></returns>
-        public static InterpMorf[] Analyse(string tekst)
+        /// <param name="text"></param>
+        /// <returns>InterpMorf array</returns>
+        public static InterpMorf[] Analyse(string text)
         {
             //IntPtr morfStruct = new IntPtr(MorfAnalyse(tekst));
-            IntPtr morfStruct = MorfAnalyse(tekst);
+            IntPtr morfStruct = MorfAnalyse(text);
 
            
             List<InterpMorf> morf = new List<InterpMorf>(3);
