@@ -1,0 +1,3 @@
+.net Wrapper for morphological analyser for polish language Morfeusz SIAT http://nlp.ipipan.waw.pl/~wolinski/morfeusz/
+
+Project file: visual studio 2008 .net version 3.5
