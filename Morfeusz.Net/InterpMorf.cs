@@ -8,37 +8,37 @@ namespace MorfeuszNet
     /// formy morfologicznej
     /// zobacz szczegółową dokumentację w orginalnym pliku morfeusz.h
     /// </summary>
-    [StructLayout(LayoutKind.Explicit, Size = 20)]
+    [StructLayout(LayoutKind.Sequential ,Size = 20)] // LayoutKind.Explicit, Size = 20
     public struct InterpMorf
     {
         /// <summary>
         ///number of start node
         /// </summary>
-        [FieldOffset(0)]
+        //[FieldOffset(0)]
         public int p;
 
         /// <summary>
         /// number of  end node
         /// </summary>
-        [FieldOffset(4)]
+        //[FieldOffset(4)]
         public int k; 
 
         /// <summary>
         /// segment (token), odpowiada polu "forma" w orinalnej bibliotece
         /// </summary>
-        [FieldOffset(8)]
+        //[FieldOffset(8)]
         public string Word; 
 
         /// <summary>
         /// lemma, odpowiada polu "haslo" w orinalnej bibliotece
         /// </summary>
-        [FieldOffset(12)]
+        //[FieldOffset(12)]
         public string Lemma; 
 
         /// <summary>
         /// morphosyntactic tag, odpowiada polu "interp" w orinalnej bibliotece
         /// </summary>
-        [FieldOffset(16)]
+        //[FieldOffset(16)]
         public string MorhpTags; 
     }
 }
