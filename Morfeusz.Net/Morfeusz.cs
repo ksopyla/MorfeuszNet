@@ -32,10 +32,10 @@ namespace MorfeuszNet
         /// Zwraca informacje o autorach
         /// </summary>
         /// <returns></returns>
-        [DllImport("morfeusz.dll", SetLastError = true, CharSet = CharSet.Ansi, EntryPoint = "morfeusz_about")]
+        [DllImport("morfeusz.dll", SetLastError = true, EntryPoint = "morfeusz_about")]
         public static extern string About();
 
-        [DllImport("morfeusz.dll", SetLastError = true, CharSet = CharSet.Ansi, EntryPoint = "morfeusz_set_option")]
+        [DllImport("morfeusz.dll", SetLastError = true,  EntryPoint = "morfeusz_set_option")]
         public static extern int MorfeuszSetOption(int option, int value);
 
         public static int SetEncoding(MorfeuszEncodings encoding)
@@ -69,7 +69,7 @@ namespace MorfeuszNet
         /// </summary>
         /// <param name="tekst"></param>
         /// <returns></returns>
-        [DllImport("morfeusz.dll", SetLastError = true, CharSet = CharSet.Ansi, EntryPoint = "morfeusz_analyse")]
+        [DllImport("morfeusz.dll", SetLastError = true, EntryPoint = "morfeusz_analyse")]
         static extern IntPtr MorfAnalyse(string tekst);
 
 
@@ -96,9 +96,10 @@ namespace MorfeuszNet
             //text = new string(winChars);
 
 
-            //SetEncoding(MorfeuszEncodings.Utf8);
+            
 
             SetEncoding(MorfeuszEncodings.Cp1250);
+            
             //IntPtr morfStruct = new IntPtr(MorfAnalyse(tekst));
             IntPtr morfStruct = MorfAnalyse(text);
 
